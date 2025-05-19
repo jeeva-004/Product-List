@@ -1,67 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-    <title>Product list with cart</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="./styles/style.css">
+  <title>Product list with cart</title>
 </head>
+
 <body>
+  <div class="container">
+    <h2>Desserts</h2>
+    <div class="items">
 
-  Desserts
+      <div class="item">
+        <img src="./assets/images/image-waffle-desktop.jpg" alt="" class="dekstop-image hidden md:hidden lg:block">
+        <img src="./assets/images/image-waffle-tablet.jpg" alt="" class="tablet-image hidden md:block lg:hidden">
+        <img src="./assets/images/image-waffle-mobile.jpg" alt="" class="mobile-image block md:hidden lg:hidden">
+        <small class="item-name">Waffle</small>
+        <p class="item-flavour">Waffle with Berries</p>
+        <span class="price">6.50</span>
+        <div class="add-cart">
+          <button><img src="./assets/images/icon-add-to-cart.svg" alt="add-cart">Add to
+            Cart</button>
+          <div class="count"><span class="increase"><img src="./assets/images/icon-increment-quantity.svg"
+                alt=""></span><span class="quantity">0</span><span class="decrease"><img
+                src="./assets/images/icon-decrement-quantity.svg" alt=""></span></div>
+        </div>
+      </div>
 
-  Waffle with Berries
-  Waffle
-  6.50
-  Add to Cart
+      <div class="item">
+        <img src="./assets/images/image-creme-brulee-desktop.jpg" alt=""
+          class="dekstop-image hidden md:hidden lg:block">
+        <img src="./assets/images/image-creme-brulee-tablet.jpg" alt="" class="tablet-image hidden md:block lg:hidden">
+        <img src="./assets/images/image-creme-brulee-mobile.jpg" alt="" class="mobile-image block md:hidden lg:hidden">
+        <small class="item-name">Crème Brûlée</small>
+        <p class="item-flavour">Vanilla Bean Crème Brûlée</p>
+        <span class="price">7.00</span>
+        <div class="add-cart">
+          <button><img src="./assets/images/icon-add-to-cart.svg" alt="add-cart">Add to
+            Cart</button>
+          <div class="count"><span class="increase"><img src="./assets/images/icon-increment-quantity.svg"
+                alt=""></span><span class="quantity">0</span><span class="decrease"><img
+                src="./assets/images/icon-decrement-quantity.svg" alt=""></span></div>
+        </div>
 
-  Vanilla Bean Crème Brûlée
-  Crème Brûlée
-  7.00
-  Add to Cart
+      </div>
+      <div class="item">
+        <img src="./assets/images/image-macaron-desktop.jpg" alt="" class="dekstop-image hidden md:hidden lg:block">
+        <img src="./assets/images/image-macaron-tablet.jpg" alt="" class="tablet-image hidden md:block lg:hidden">
+        <img src="./assets/images/image-macaron-mobile.jpg" alt="" class="mobile-image block md:hidden lg:hidden">
+        <small class="item-name"> Macaron</small>
+        <p class="item-flavour"> Macaron Mix of Five</p>
+        <span class="price">8.00</span>
+        <div class="add-cart">
+          <button><img src="./assets/images/icon-add-to-cart.svg" alt="add-cart">Add to
+            Cart</button>
+          <div class="count"><span class="increase"><img src="./assets/images/icon-increment-quantity.svg"
+                alt=""></span><span class="quantity">0</span><span class="decrease"><img
+                src="./assets/images/icon-decrement-quantity.svg" alt=""></span></div>
+        </div>
+      </div>
 
-  Macaron Mix of Five
-  Macaron
-  8.00
-  Add to Cart
+      <div class="item">
+        <img src="./assets/images/image-tiramisu-desktop.jpg" alt="" class="dekstop-image hidden md:hidden lg:block">
+        <img src="./assets/images/image-tiramisu-tablet.jpg" alt="" class="tablet-image hidden m:block lg:hidden">
+        <img src="./assets/images/image-tiramisu-mobile.jpg" alt="" class="mobile-image block md:hidden lg:hidden">
+        <small class="item-name"> Tiramisu</small>
+        <p class="item-flavour"> Classic Tiramisu</p>
+        <span class="price">5.50</span>
+        <div class="add-cart">
+          <button><img src="./assets/images/icon-add-to-cart.svg" alt="add-cart">Add to
+            Cart</button>
+          <div class="count"><span class="increase"><img src="./assets/images/icon-increment-quantity.svg"
+                alt=""></span><span class="quantity">0</span><span class="decrease"><img
+                src="./assets/images/icon-decrement-quantity.svg" alt=""></span></div>
+        </div>
+      </div>
 
-  Classic Tiramisu
-  Tiramisu
-  5.50
-  Add to Cart
+      <div class="item">
+        <img src="./assets/images/image-baklava-desktop.jpg" alt="" class="dekstop-image hidden md:hidden lg:block">
+        <img src="./assets/images/image-baklava-tablet.jpg" alt="" class="tablet-image hidden md:block lg:hidden">
+        <img src="./assets/images/image-baklava-mobile.jpg" alt="" class="mobile-image block md:hidden lg:hidden">
+        <small class="item-name"> Baklava</small>
+        <p class="item-flavour"> Pistachio Baklava </p>
+        <span class="price">4.00</span>
+        <div class="add-cart">
+          <button><img src="./assets/images/icon-add-to-cart.svg" alt="add-cart">Add to
+            Cart</button>
+          <div class="count"><span class="increase"><img src="./assets/images/icon-increment-quantity.svg"
+                alt=""></span><span class="quantity">0</span><span class="decrease"><img
+                src="./assets/images/icon-decrement-quantity.svg" alt=""></span></div>
+        </div>
+      </div>
 
-  Pistachio Baklava
-  Baklava
-  4.00
-  Add to Cart
+      <div class="item">
+        <img src="./assets/images/image-meringue-desktop.jpg" alt="" class="dekstop-image hidden md:hidden lg:block">
+        <img src="./assets/images/image-meringue-tablet.jpg" alt="" class="tablet-image hidden md:block lg:hidden">
+        <img src="./assets/images/image-meringue-mobile.jpg" alt="" class="mobile-image block md:hidden lg:hidden">
+        <small class="item-name"> Pie</small>
+        <p class="item-flavour"> Lemon Meringue Pie</p>
+        <span class="price">5.00</span>
+        <div class="add-cart">
+          <button><img src="./assets/images/icon-add-to-cart.svg" alt="add-cart">Add to
+            Cart</button>
+          <div class="count"><span class="increase"><img src="./assets/images/icon-increment-quantity.svg"
+                alt=""></span><span class="quantity">0</span><span class="decrease"><img
+                src="./assets/images/icon-decrement-quantity.svg" alt=""></span></div>
+        </div>
+      </div>
 
-  Lemon Meringue Pie
-  Pie
-  5.00
-  Add to Cart
+      <div class="item">
+        <img src="./assets/images/image-cake-desktop.jpg" alt="" class="dekstop-image hidden md:hidden lg:block">
+        <img src="./assets/images/image-cake-tablet.jpg" alt="" class="tablet-image hidden md:block lg:hidden">
+        <img src="./assets/images/image-cake-mobile.jpg" alt="" class="mobile-image block md:hidden lg:hidden">
+        <small class="item-name"> Cake</small>
+        <p class="item-flavour"> Red Velvet Cake</p>
+        <span class="price">4.50</span>
+        <div class="add-cart">
+          <button><img src="./assets/images/icon-add-to-cart.svg" alt="add-cart">Add to
+            Cart</button>
+          <div class="count"><span class="increase"><img src="./assets/images/icon-increment-quantity.svg"
+                alt=""></span><span class="quantity">0</span><span class="decrease"><img
+                src="./assets/images/icon-decrement-quantity.svg" alt=""></span></div>
+        </div>
+      </div>
 
-  Red Velvet Cake
-  Cake
-  4.50
-  Add to Cart
+      <div class="item">
+        <img src="./assets/images/image-brownie-desktop.jpg" alt="" class="dekstop-image hidden md:hidden lg:block">
+        <img src="./assets/images/image-brownie-tablet.jpg" alt="" class="tablet-image hidden md:block lg:hidden">
+        <img src="./assets/images/image-brownie-mobile.jpg" alt="" class="mobile-image block md:hidden lg:hidden">
+        <small class="item-name"> Brownie</small>
+        <p class="item-flavour"> Salted Caramel Brownie </p>
+        <span class="price">4.50</span>
+        <div class="add-cart">
+          <button><img src="./assets/images/icon-add-to-cart.svg" alt="add-cart">Add to
+            Cart</button>
+          <div class="count"><span class="increase"><img src="./assets/images/icon-increment-quantity.svg"
+                alt=""></span><span class="quantity">0</span><span class="decrease"><img
+                src="./assets/images/icon-decrement-quantity.svg" alt=""></span></div>
+        </div>
+      </div>
 
-  Salted Caramel Brownie
-  Brownie
-  4.50
-  Add to Cart
+      <div class="item">
+        <img src="./assets/images/image-panna-cotta-desktop.jpg" alt="" class="dekstop-image hidden md:hidden lg:block">
+        <img src="./assets/images/image-panna-cotta-tablet.jpg" alt="" class="tablet-image hidden md:block lg:hidden">
+        <img src="./assets/images/image-panna-cotta-mobile.jpg" alt="" class="mobile-image block md:hidden lg:hidden">
+        <small class="item-name"> Panna Cotta</small>
+        <p class="item-flavour"> Vanilla Panna Cotta</p>
+        <span class="price">6.50</span>
+        <div class="add-cart">
+          <button><img src="./assets/images/icon-add-to-cart.svg" alt="add-cart">Add to
+            Cart</button>
+          <div class="count"><span class="increase"><img src="./assets/images/icon-increment-quantity.svg"
+                alt=""></span><span class="quantity">0</span><span class="decrease"><img
+                src="./assets/images/icon-decrement-quantity.svg" alt=""></span></div>
+        </div>
+      </div>
 
-  Vanilla Panna Cotta
-  Panna Cotta
-  6.50
-  Add to Cart
+    </div>
 
-  Your Cart (<!-- Quantity -->)
-  Your added items will appear here
+    <div class="cart-details">
+      <h2>Your Cart (<span class="cart-total">0</span>)</h2>
+      <img src="./assets/images/illustration-empty-cart.svg" alt="">
+      Your added items will appear here
+    </div>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
   </div>
 </body>
+
 </html>
