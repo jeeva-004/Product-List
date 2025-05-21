@@ -1,4 +1,5 @@
 * {
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
   outline: 0;
@@ -7,10 +8,82 @@
 body {
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px 0;
+  background-color: hsl(13, 31%, 94%);
+}
+body h1 {
+  align-self: start;
 }
 body .container {
   width: 100%;
-  height: inherit;
+  height: 100%;
+}
+body .container .dekstop-image {
+  width: 250px;
+  border-radius: 18px;
+  margin-bottom: 25px;
+}
+body .container .tablet-image {
+  width: 300px;
+  border-radius: 18px;
+}
+body .container .mobile-image {
+  width: 100%;
+  border-radius: 18px;
+}
+
+.item {
+  width: 100%;
+  padding: 10px 15px;
+  position: relative;
+}
+
+.add-cart {
+  width: 150px;
+  cursor: pointer;
+  padding: 8px 10px;
+  position: absolute;
+  display: flex;
+  border-radius: 40px;
+  background-color: hsl(20, 50%, 98%);
+  border: none;
+  justify-content: center;
+  border: 1px solid hsl(7, 20%, 60%);
+}
+.add-cart .count {
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  display: none;
+}
+.add-cart button {
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  font-size: 0.7em;
+  color: hsl(14, 65%, 9%);
+  border: none;
+  font-weight: 600;
+}
+
+.item-name {
+  color: hsl(12, 20%, 44%);
+  font-size: 0.7em;
+}
+
+.item-flavour {
+  color: hsl(14, 65%, 9%);
+  font-size: 0.8em;
+  font-weight: 600;
+}
+
+.price {
+  color: hsl(0, 63%, 54%);
+  font-size: 0.8em;
 }
 
 /*# sourceMappingURL=style.css.map */

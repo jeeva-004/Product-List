@@ -1,16 +1,95 @@
-*{
-    // margin: 0;
+@import 'variables';
+
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     outline: 0;
 }
 
-body{
+body {
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px 0;
+    background-color: $background-color;
 
-    .container{
-        width: 100%;
-        height: inherit;
+    h1 {
+        align-self: start;
     }
+
+    .container {
+        width: 100%;
+        height: 100%;
+
+        .dekstop-image {
+            width: 250px;
+            border-radius: 18px;
+            margin-bottom: 25px;
+        }
+
+        .tablet-image {
+            width: 300px;
+            border-radius: 18px;
+        }
+
+        .mobile-image {
+            width: 100%;
+            border-radius: 18px;
+        }
+    }
+}
+
+.item {
+    width: 100%;
+    padding: 10px 15px;
+    position: relative;
+}
+
+.add-cart {
+    width: 150px;
+    cursor: pointer;
+    padding: 8px 10px;
+    position: absolute;
+    display: flex;
+    border-radius: 40px;
+    background-color: $light;
+    border: none;
+    justify-content: center;
+    border: 1px solid $light-brown;
+
+    .count {
+        width: 100%;
+        cursor: pointer;
+        border: none;
+        display: none;
+    }
+
+    button {
+        width: 100%;
+        cursor: pointer;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        font-size: $small;
+        color: $brown;
+        border: none;
+        font-weight: 600;
+    }
+}
+
+.item-name{
+    color: $dark-brown;
+    font-size: $small;
+}
+.item-flavour{
+    color: $brown;
+    font-size: $medium;
+    font-weight: 600;
+}
+
+.price{
+    color: $pure-brown;
+    font-size: $medium;
 }
