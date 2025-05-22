@@ -22,7 +22,7 @@ body {
     .container {
         width: 100%;
         height: 100%;
-
+        margin: 20px 0;
         .dekstop-image {
             width: 250px;
             border-radius: 18px;
@@ -32,11 +32,13 @@ body {
         .tablet-image {
             width: 300px;
             border-radius: 18px;
+            margin-bottom: 20px;
         }
 
         .mobile-image {
             width: 100%;
             border-radius: 18px;
+            margin-bottom: 20px;
         }
     }
 }
@@ -45,16 +47,20 @@ body {
     width: 100%;
     padding: 10px 15px;
     position: relative;
+    background-color: $light;
+    border-radius: 8px;
+    box-shadow: 0 0 1px $light-brown;
 }
 
 .add-cart {
     width: 150px;
     cursor: pointer;
-    padding: 8px 10px;
+    padding: 5px 10px;
     position: absolute;
     display: flex;
     border-radius: 40px;
     background-color: $light;
+    // background-color: $orange-red-color;
     border: none;
     justify-content: center;
     border: 1px solid $light-brown;
@@ -63,13 +69,27 @@ body {
         width: 100%;
         cursor: pointer;
         border: none;
-        display: none;
+        display: none; 
+        color: $light;
+        font-size: $small;
+        background-color: $orange-red-color;
+        font-weight: 600;
+        justify-content: space-around;  
+        align-items: center;     
+        img{
+            width: 15px;
+            height: 15px;
+            padding:4px;
+            outline: 1px solid $light;
+            border-radius: 50%;
+        }
     }
 
     button {
         width: 100%;
         cursor: pointer;
         display: flex;
+        background-color: $light;
         gap: 10px;
         justify-content: center;
         font-size: $small;
@@ -92,4 +112,30 @@ body {
 .price{
     color: $pure-brown;
     font-size: $medium;
+}
+
+.cart-details{
+    background-color: $light;
+    padding: 10px 15px;
+    border-radius: 18px;
+    box-shadow: 0 0 2px $light-brown;
+    h2{
+        color: $orange-red-color;
+    }
+
+    .empty-cart{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content:center;
+        align-items: center;
+        img{
+            width: 140px;
+        }
+        p{
+            color: $dark-brown;
+            font-size: $small;
+            font-weight: 600;
+        }
+    }
 }

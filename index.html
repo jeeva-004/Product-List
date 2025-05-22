@@ -11,9 +11,9 @@
 </head>
 
 <body>
-    <h1 class="text-4xl font-bold mb-2">Desserts</h1>
+  <h1 class="text-4xl font-bold mb-2">Desserts</h1>
 
-  <div class="container mx-2 flex justify-between gap-3 flex-col md:flex-row lg:flex-row">
+  <div class="container mx-2 flex items-center justify-between gap-5 flex-col md:flex-row lg:flex-row">
     <div class="items grid justify-center gap-5 grid-flow-row grid-cols-1 self-center md:grid-cols-2 lg:grid-cols-3">
 
       <div class="item">
@@ -162,10 +162,16 @@
       </div>
     </div>
 
-    <div class="cart-details ">
-      <h2>Your Cart (<span class="cart-total">0</span>)</h2>
-      <img src="./assets/images/illustration-empty-cart.svg" alt="">
-     <p class="empty-msg"> Your added items will appear here</p>
+    <div class="cart-details w-full md:w-2/6 self-start">
+      <h2 class="text-lg font-bold">Your Cart (<span class="cart-total">0</span>)</h2>
+      <div class="empty-cart">
+        <img src="./assets/images/illustration-empty-cart.svg" alt="">
+        <p class="empty-msg"> Your added items will appear here</p>
+      </div>
+
+      <div class="item-cart">
+
+      </div>
     </div>
 
   </div>

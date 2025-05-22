@@ -19,6 +19,7 @@ body h1 {
 body .container {
   width: 100%;
   height: 100%;
+  margin: 20px 0;
 }
 body .container .dekstop-image {
   width: 250px;
@@ -28,22 +29,27 @@ body .container .dekstop-image {
 body .container .tablet-image {
   width: 300px;
   border-radius: 18px;
+  margin-bottom: 20px;
 }
 body .container .mobile-image {
   width: 100%;
   border-radius: 18px;
+  margin-bottom: 20px;
 }
 
 .item {
   width: 100%;
   padding: 10px 15px;
   position: relative;
+  background-color: hsl(20, 50%, 98%);
+  border-radius: 8px;
+  box-shadow: 0 0 1px hsl(7, 20%, 60%);
 }
 
 .add-cart {
   width: 150px;
   cursor: pointer;
-  padding: 8px 10px;
+  padding: 5px 10px;
   position: absolute;
   display: flex;
   border-radius: 40px;
@@ -57,11 +63,25 @@ body .container .mobile-image {
   cursor: pointer;
   border: none;
   display: none;
+  color: hsl(20, 50%, 98%);
+  font-size: 0.7em;
+  background-color: hsl(14, 86%, 42%);
+  font-weight: 600;
+  justify-content: space-around;
+  align-items: center;
+}
+.add-cart .count img {
+  width: 15px;
+  height: 15px;
+  padding: 4px;
+  outline: 1px solid hsl(20, 50%, 98%);
+  border-radius: 50%;
 }
 .add-cart button {
   width: 100%;
   cursor: pointer;
   display: flex;
+  background-color: hsl(20, 50%, 98%);
   gap: 10px;
   justify-content: center;
   font-size: 0.7em;
@@ -84,6 +104,31 @@ body .container .mobile-image {
 .price {
   color: hsl(0, 63%, 54%);
   font-size: 0.8em;
+}
+
+.cart-details {
+  background-color: hsl(20, 50%, 98%);
+  padding: 10px 15px;
+  border-radius: 18px;
+  box-shadow: 0 0 2px hsl(7, 20%, 60%);
+}
+.cart-details h2 {
+  color: hsl(14, 86%, 42%);
+}
+.cart-details .empty-cart {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.cart-details .empty-cart img {
+  width: 140px;
+}
+.cart-details .empty-cart p {
+  color: hsl(12, 20%, 44%);
+  font-size: 0.7em;
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=style.css.map */
