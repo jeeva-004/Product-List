@@ -13,6 +13,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 10px 20px 0;
+    user-select: none;
     background-color: $background-color;
     // background-color: rgb(190, 186, 186);
 
@@ -57,10 +58,11 @@ body {
 
 .add-cart {
     width: 150px;
+    height: 30px;
     cursor: pointer;
-    padding: 5px 10px;
     position: absolute;
     display: flex;
+    align-items: center;
     border-radius: 40px;
     background-color: $light;
     // background-color: $orange-red-color;
@@ -70,10 +72,13 @@ body {
 
     .count {
         width: 100%;
+        height: 100%;
         cursor: pointer;
         border: none;
-        display: none;
+        display: flex;
+        position: absolute;
         color: $light;
+        border-radius: 40px;
         font-size: $small;
         background-color: $orange-red-color;
         font-weight: 600;
@@ -91,15 +96,23 @@ body {
 
     button {
         width: 100%;
+        height: 100%;
         cursor: pointer;
         display: flex;
+        position: relative;
         background-color: $light;
+        border-radius: 40px;
         gap: 10px;
         justify-content: center;
+        align-items: center;
         font-size: $small;
         color: $brown;
+        z-index: 1;
         border: none;
         font-weight: 600;
+        img{
+            height: 20px;
+        }
     }
 }
 
@@ -132,7 +145,7 @@ body {
     }
 
     .empty-cart {
-        display: none;
+        display: flex;
         flex-direction: column;
         width: 100%;
         justify-content: center;
@@ -151,16 +164,21 @@ body {
 }
 
 .item-cart {
-    display: flex;
+    display: none;
     // border: 1px solid;
     flex-direction: column;
     align-items: space-between;
     justify-content: center;
     gap: 30px;
-    .list{
+    .list-group{
         display:flex;
         flex-direction: column;
         gap:20px;
+        .list{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
     .total-cost{
         display: flex;

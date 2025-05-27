@@ -11,6 +11,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 10px 20px 0;
+  user-select: none;
   background-color: hsl(13, 31%, 94%);
 }
 body h1 {
@@ -48,10 +49,11 @@ body .container .mobile-image {
 
 .add-cart {
   width: 150px;
+  height: 30px;
   cursor: pointer;
-  padding: 5px 10px;
   position: absolute;
   display: flex;
+  align-items: center;
   border-radius: 40px;
   background-color: hsl(20, 50%, 98%);
   border: none;
@@ -60,10 +62,13 @@ body .container .mobile-image {
 }
 .add-cart .count {
   width: 100%;
+  height: 100%;
   cursor: pointer;
   border: none;
-  display: none;
+  display: flex;
+  position: absolute;
   color: hsl(20, 50%, 98%);
+  border-radius: 40px;
   font-size: 0.7em;
   background-color: hsl(14, 86%, 42%);
   font-weight: 600;
@@ -79,15 +84,23 @@ body .container .mobile-image {
 }
 .add-cart button {
   width: 100%;
+  height: 100%;
   cursor: pointer;
   display: flex;
+  position: relative;
   background-color: hsl(20, 50%, 98%);
+  border-radius: 40px;
   gap: 10px;
   justify-content: center;
+  align-items: center;
   font-size: 0.7em;
   color: hsl(14, 65%, 9%);
+  z-index: 1;
   border: none;
   font-weight: 600;
+}
+.add-cart button img {
+  height: 20px;
 }
 
 .item-name {
@@ -117,7 +130,7 @@ body .container .mobile-image {
   margin-bottom: 10px;
 }
 .cart-details .empty-cart {
-  display: none;
+  display: flex;
   flex-direction: column;
   width: 100%;
   justify-content: center;
@@ -133,16 +146,21 @@ body .container .mobile-image {
 }
 
 .item-cart {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: space-between;
   justify-content: center;
   gap: 30px;
 }
-.item-cart .list {
+.item-cart .list-group {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+.item-cart .list-group .list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .item-cart .total-cost {
   display: flex;
