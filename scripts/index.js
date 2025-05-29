@@ -6,7 +6,7 @@ let list_group = document.querySelector('.list-group');
 let cart_total = document.querySelector('.cart-total');
 let empty_cart = document.querySelector('.empty-cart');
 let item_cart = document.querySelector('.item-cart');
-let total_cart = 0
+let total_cart = 0;
 
 // visible the add the items button
 
@@ -35,7 +35,7 @@ btn_one.forEach(btn => {
         let price = item.querySelector('.price');
         let final_cost;
         increase.addEventListener('click', () => {
-            if (cart_total.innerHTML <=0) {
+            if (cart_total.innerHTML < 0) {
                 empty_cart.style.display = 'flex';
                 item_cart.style.display = 'none';
             }
@@ -48,7 +48,7 @@ btn_one.forEach(btn => {
             val += 1;
             total_quantity.textContent = val;
             final_cost = price.textContent * val;
-            total_cart+=1;
+            total_cart += 1;
             cart_total.innerHTML = total_cart;
             new_div.classList.add('list');
             new_div.innerHTML = `
@@ -64,13 +64,13 @@ btn_one.forEach(btn => {
 
         decrease.addEventListener('click', () => {
             val -= 1;
-            if (val <= 0)
+            if (val < 0)
                 val = 0;
 
+            if (total_cart < 0)
+                total_cart = 0;
             total_quantity.textContent = val;
             final_cost = price.textContent * val;
-            total_cart+=1;
-            cart_total.innerHTML = total_cart;
             if (cart_total.innerHTML <= 0) {
                 empty_cart.style.display = 'flex';
                 item_cart.style.display = 'none';
@@ -89,8 +89,14 @@ btn_one.forEach(btn => {
           </div>
           <img class="remove" src="./assets/images/icon-remove-item.svg" alt="">`;
             list_group.appendChild(new_div);
+            let check = new_div.querySelector('.price').innerHTML;
+            if (check[0] == 0) {
+                list_group.removeChild(new_div)
+            }
         })
+        cart_total.innerHTML = val;
+
     })
 })
 
-let cart = document.querySelectorAll()
+
