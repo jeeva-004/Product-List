@@ -103,3 +103,65 @@ function update_Cart() {
         empty_cart.style.display = 'flex'
     }
 }
+
+const confirm_order = document.querySelector('.btn');
+const container = document.querySelector('.container');
+const body_ = document.querySelector('body');
+const order_confirmation = document.querySelector('.order-confirmation');
+confirm_order.addEventListener('click', () => {
+    container.style.zIndex = '-1';
+    order_confirmation.style.display = 'flex';
+    order_confirmation.classList.add('animate')
+    body_.style.backgroundColor= '';
+    const all_list = list_group.querySelectorAll('.list');
+    const list_group_two = order_confirmation.querySelector('.list-group-two');
+    const div_two = document.createElement('div');
+    div_two.classList.add('list');
+    let correct_img=0;
+    all_list.forEach(li =>{
+        let item_flav = li.querySelector('.item-flavour');
+        let item_quan = li.querySelector('.price').textContent.replace(/[^0-9.]/g,'');
+        let item_co = li.querySelector('.food-cost').textContent.replace(/[^0-9.]/g,'');
+        let item_to = li.querySelector('.total').textContent.replace(/[^0-9.]/g,'');
+        let img_arr = ['image-baklava-thumbnail', 'image-brownie-thumbnail', 'image-cake-thumbnail', 'image-brulee-thumbnail', 'image-macaron-thumbnail', 'image-meringue-thumbnail', 'image-meringue-thumbnail', 'image-tiramisu-thumbnail', 'image-waffle-thumbnail'];
+        let index;
+        let formated_flav = item_flav.textContent.toLowerCase();
+        for (let i in img_arr){
+           let formated_img =  img_arr[i].
+            replace('image-','').
+            replace('-thumbnail','').
+            replaceAll('-',' ').
+            toLowerCase();
+            if(formated_flav.includes(formated_img)){
+              index=formated_img;
+            }
+        }
+        console.log(index)
+
+        let inner_content = `
+                  <div class="food-detail">
+            <img src="./assets/images/image-brownie-thumbnail.jpg" alt="">
+            <div class="name-price">
+              <p class="item-flavour">${item_flav.textContent}</p>
+              <span class="price">${item_quan}x</span>
+              <span class="food-cost">@$${item_co}</span>
+            </div>
+          </div>
+          <span class="total">$${parseFloat(item_to).toFixed(2)}</span>`;
+              div_two.innerHTML = inner_content;
+    list_group_two.appendChild(div_two);
+    })
+
+})
+
+function scrollToSection() {
+    document.getElementById("topSection").scrollIntoView({ behavior: "smooth" });
+}
+
+let aflj = 'Waffle with Berries';
+let jbf = 'waffle'
+
+if(aflj.includes(jbf))
+    console.log('correct')
+else
+    console.log('not')

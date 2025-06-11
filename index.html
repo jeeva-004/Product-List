@@ -13,7 +13,8 @@
 <body>
   <h1 class="text-4xl font-bold mb-2">Desserts</h1>
 
-  <div class="container  mx-2 flex items-center justify-between gap-5 flex-col md:flex-row lg:flex-row">
+  <div class="container   mx-2 flex items-center justify-between gap-5 flex-col md:flex-row lg:flex-row"
+    id="topSection">
     <div class="items grid justify-center gap-5 grid-flow-row grid-cols-1 self-center md:grid-cols-2 lg:grid-cols-3">
 
       <div class="item">
@@ -177,14 +178,30 @@
         </div>
         <p class="description"><img src="./assets/images/icon-carbon-neutral.svg" alt="">This is a <b>carbon-neutral
           </b> delivery</p>
-        <button class="btn">Confirm Order</button>
+        <button class="btn" onclick="scrollToSection()">Confirm Order</button>
       </div>
     </div>
 
   </div>
-  <div class="order-confirmation">
+  <div class="order-confirmation  ">
     <div class="box">
-
+      <img class="order-confirm" src="./assets/images/icon-order-confirmed.svg" alt="">
+      <h1 class="text-2xl font-bold">Order Confirmed</h1>
+      <p class="confirmation-greeting">We hope you enjoy food!</p>
+      <div class="list-group-two">
+        <!-- <div class="list">
+          <div class="food-detail">
+            <img src="./assets/images/image-brownie-thumbnail.jpg" alt="">
+            <div class="name-price">
+              <p class="item-flavour">icecream</p>
+              <span class="price">1x</span>
+              <span class="food-cost">@$2.00</span>
+            </div>
+          </div>
+          <span class="total">$5.00</span>
+        </div> -->
+      </div>
+      <a href="./index.html">Start New Order</a>
     </div>
   </div>
   <script src="./scripts/index.js"></script>
