@@ -112,35 +112,35 @@ confirm_order.addEventListener('click', () => {
     container.style.zIndex = '-1';
     order_confirmation.style.display = 'flex';
     order_confirmation.classList.add('animate')
-    body_.style.backgroundColor= '';
     const all_list = list_group.querySelectorAll('.list');
+    // const total_val = list_group.querySelector('.amount');
     const list_group_two = order_confirmation.querySelector('.list-group-two');
-    const div_two = document.createElement('div');
-    div_two.classList.add('list');
-    let correct_img=0;
-    all_list.forEach(li =>{
+    const total_ = order_confirmation.querySelector('.total-val');
+    let value_ = 0;
+    all_list.forEach(li => {
+        const div_two = document.createElement('div');
+        div_two.classList.add('list');
         let item_flav = li.querySelector('.item-flavour');
-        let item_quan = li.querySelector('.price').textContent.replace(/[^0-9.]/g,'');
-        let item_co = li.querySelector('.food-cost').textContent.replace(/[^0-9.]/g,'');
-        let item_to = li.querySelector('.total').textContent.replace(/[^0-9.]/g,'');
-        let img_arr = ['image-baklava-thumbnail', 'image-brownie-thumbnail', 'image-cake-thumbnail', 'image-brulee-thumbnail', 'image-macaron-thumbnail', 'image-meringue-thumbnail', 'image-meringue-thumbnail', 'image-tiramisu-thumbnail', 'image-waffle-thumbnail'];
+        let item_quan = li.querySelector('.price').textContent.replace(/[^0-9.]/g, '');
+        let item_co = li.querySelector('.food-cost').textContent.replace(/[^0-9.]/g, '');
+        let item_to = li.querySelector('.total').textContent.replace(/[^0-9.]/g, '');
+        let img_arr = ['image-baklava-thumbnail', 'image-brownie-thumbnail', 'image-cake-thumbnail', 'image-creme-thumbnail', 'image-macaron-thumbnail', 'image-meringue-thumbnail', 'image-meringue-thumbnail', 'image-tiramisu-thumbnail', 'image-waffle-thumbnail','image-panna-cotta-thumbnail'];
         let index;
         let formated_flav = item_flav.textContent.toLowerCase();
         for (let i in img_arr){
            let formated_img =  img_arr[i].
             replace('image-','').
             replace('-thumbnail','').
-            replaceAll('-',' ').
             toLowerCase();
+            // console.log(formated_flav,formated_img)
             if(formated_flav.includes(formated_img)){
-              index=formated_img;
+              index = i;
             }
         }
-        console.log(index)
-
-        let inner_content = `
+        value_+=parseInt(item_to);
+        inner_content = `
                   <div class="food-detail">
-            <img src="./assets/images/image-brownie-thumbnail.jpg" alt="">
+            <img src="./assets/images/${img_arr[index]}.jpg" class="thumbnail-img" alt="">
             <div class="name-price">
               <p class="item-flavour">${item_flav.textContent}</p>
               <span class="price">${item_quan}x</span>
@@ -148,20 +148,12 @@ confirm_order.addEventListener('click', () => {
             </div>
           </div>
           <span class="total">$${parseFloat(item_to).toFixed(2)}</span>`;
-              div_two.innerHTML = inner_content;
-    list_group_two.appendChild(div_two);
+        div_two.innerHTML = inner_content;
+        list_group_two.appendChild(div_two);
     })
-
+    total_.innerHTML = value_;
 })
 
 function scrollToSection() {
     document.getElementById("topSection").scrollIntoView({ behavior: "smooth" });
 }
-
-let aflj = 'Waffle with Berries';
-let jbf = 'waffle'
-
-if(aflj.includes(jbf))
-    console.log('correct')
-else
-    console.log('not')

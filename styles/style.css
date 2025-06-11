@@ -282,7 +282,7 @@ body .container .mobile-image {
   flex-direction: column;
   gap: 10px;
   overflow: auto;
-  margin: 10px 0 15px;
+  margin: 10px 0;
 }
 .order-confirmation .box .list-group-two .list {
   display: flex;
@@ -304,9 +304,10 @@ body .container .mobile-image {
 .order-confirmation .box .list-group-two .list .total {
   color: hsl(14, 65%, 9%);
   font-weight: 600;
+  font-size: 0.8em;
 }
-.order-confirmation .box .list-group-two .list img {
-  width: 60px;
+.order-confirmation .box .list-group-two .list .thumbnail-img {
+  width: 45px;
   border-radius: 8px;
 }
 .order-confirmation .box .confirmation-greeting {
@@ -326,6 +327,7 @@ body .container .mobile-image {
   font-weight: 600;
   cursor: pointer;
   transition: 0.15s ease;
+  margin-top: 10px;
 }
 .order-confirmation .box a:hover {
   opacity: 0.9;
